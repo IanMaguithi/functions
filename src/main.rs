@@ -5,6 +5,8 @@ fn main() {
     another_function();
 
     function_with_parameters(5);
+
+    function_with_multiple_paraneters(5, 'h');
 }
 
 fn another_function() {
@@ -16,4 +18,7 @@ fn function_with_parameters(x: i32) {
     println!("The value of x is: {x}");
 }
 
-
+// function with multiple parameters
+fn function_with_multiple_paraneters(value:i32, unit_label:char){
+    println!("The measurement is: {value}{unit_label}");
+}
