@@ -7,6 +7,8 @@ fn main() {
     function_with_parameters(5);
 
     function_with_multiple_paraneters(5, 'h');
+
+    return_y();
 }
 
 fn another_function() {
@@ -21,4 +23,15 @@ fn function_with_parameters(x: i32) {
 // function with multiple parameters
 fn function_with_multiple_paraneters(value:i32, unit_label:char){
     println!("The measurement is: {value}{unit_label}");
+}
+
+// exploring expressions and statements
+//* generally adding a semicolon to an expression makes it a statement
+//* expressions return a value
+fn return_y(){
+    let y = {
+        let x = 1;
+        x+1
+    };
+    println!("The value of y is: {y}");
 }
