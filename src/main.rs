@@ -9,6 +9,9 @@ fn main() {
     function_with_multiple_paraneters(5, 'h');
 
     return_y();
+
+    let x = five();
+    println!("The value of x is: {x}");
 }
 
 fn another_function() {
@@ -34,4 +37,9 @@ fn return_y(){
         x+1
     };
     println!("The value of y is: {y}");
+}
+
+// functions that return values
+fn five() -> i32{
+    5
 }
