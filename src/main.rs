@@ -10,8 +10,11 @@ fn main() {
 
     return_y();
 
-    let x = five();
-    println!("The value of x is: {x}");
+    let mut x = five();
+    function_with_parameters(x);
+
+    x = plus_one(5);
+    function_with_parameters(x);
 }
 
 fn another_function() {
@@ -24,22 +27,26 @@ fn function_with_parameters(x: i32) {
 }
 
 // function with multiple parameters
-fn function_with_multiple_paraneters(value:i32, unit_label:char){
+fn function_with_multiple_paraneters(value: i32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
 }
 
 // exploring expressions and statements
 //* generally adding a semicolon to an expression makes it a statement
 //* expressions return a value
-fn return_y(){
+fn return_y() {
     let y = {
         let x = 1;
-        x+1
+        x + 1
     };
     println!("The value of y is: {y}");
 }
 
 // functions that return values
-fn five() -> i32{
+fn five() -> i32 {
     5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
