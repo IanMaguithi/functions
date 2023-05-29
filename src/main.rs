@@ -15,6 +15,13 @@ fn main() {
 
     x = plus_one(5);
     function_with_parameters(x);
+
+    //? ownership
+    let s = String::from("hello");
+    // clone is used to create a deep copy of the data on the heap
+    let s2 = s.clone();
+    takes_ownership(s);
+    println!("{}", s2); // this will throw an error because s was moved to the function
 }
 
 fn another_function() {
@@ -49,4 +56,9 @@ fn five() -> i32 {
 
 fn plus_one(x: i32) -> i32 {
     x + 1
+}
+
+//? ownership
+fn takes_ownership(some_string: String) {
+    println!("{}", some_string);
 }
